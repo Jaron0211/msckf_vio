@@ -511,6 +511,7 @@ void MsckfVio::mocapOdomCallback(
   return;
 }
 
+//read from EuRoC topic
 void MsckfVio::leicaCallback(
   const geometry_msgs::PointStamped& msg) {
 
@@ -527,7 +528,7 @@ void MsckfVio::leicaCallback(
       leica_msg_buffer.point.y -= leica_offset_y;
       leica_msg_buffer.point.z -= leica_offset_z;
 
-      leica_msg_buffer.header.frame_id = fixed_frame_id;
+      leica_msg_buffer.header.frame_id = fixed_frame_id; //fix the coordinate frame to the main fixed frame
     }
 }
 
