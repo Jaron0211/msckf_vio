@@ -1,4 +1,5 @@
 # MSCKF\_VIO
+Show with EuRoC ground truth.
 
 
 The `MSCKF_VIO` package is a stereo version of MSCKF. The software takes in synchronized stereo images and IMU messages and generates real-time 6DOF pose estimation of the IMU frame.
